@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bootstrap Theme</title>
+</head>
+
+<body>
+
+<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3">
+  <div class="container justify-content-center">
+    <a class="navbar-brand" href="#"><strong>K-Means Clustering</strong></a>
+  </div>
+</nav>
+
+<section class="text-center" style="padding-top: 70px;">
+  <p class="mx-4" style="font-size:larger">K-Means divides your dataset into k number of clusters using an iterative optimisation strategy. 
+    Each cluster is represented by a centre. A point belongs to to a cluster whose centre is closest to it.
+  </p>
+  <img src="/img/k-means-clustering.png" width="400px">
+</section>
+
+<!-- 2nd box-->
+<div class="card w-80 mt-3 mx-4">
+    <div class="card-body">
+        <h6 class="card-title"><strong>Things to know before using K-Means clustering</strong></h6>
+
+        <div class="mt-4 ml-3" style="font-size: small; font-weight: 400;">
+            <div class="row">
+                <p class="card-text">1. K-Means clustering cannot handle non-globular structure</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt1" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt1">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="card-text">2. K-Means clustering is sensitive to outliers</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt2" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt2">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="card-text">3. Should you scale your data before using K-Means?</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt2" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt3">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Insert Ing Sin's code for third box-->
+
+<!-- Third row box-->
+<div class="row mt-2 ml-5">
+    <div class="col-md-4">
+      <div>
+        <div class="jumbotron bg-white text-center bg-info mx-auto mt-3 rounded-pill p-4" style="height: 416px;">
+            <h4 class="text-dark" style="text-align:left"><strong>Input parameters</strong></h4>
+            <div class="input-group-prepend">
+                <span class="input-group-text">k</span>
+            </div>
+            <div class=" input-group mb-1 mt-3">
+                <input type="text" class="form-control">
+            </div>
+            <p style="text-align:left">Number of clusters to output</p>
+            <div class="row align-items-end mt-5">
+                <a class="col btn btn-warning btn-rounded btn-lg" href="#" role="button"><strong>Compute</strong></a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 ml-1">
+      <div>
+        <div class="jumbotron bg-white text-center bg-info mx-auto mt-3 rounded-pill p-4" style="width:700px">
+            <h4 class="text-dark mb-3" style="text-align:left"><strong>Output</strong></h4>
+            <img class="img-responsive"  src="{{ result_of_KMeans }}" width="300">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- Fourth row box-->
+<div class="card w-80 mt-2 mx-4">
+  <div class="card-body">
+    <h6 class="card-title"><strong>Results interpretation</strong></h6>
+    <div class="ml-1"> 
+      <section class="mt-4">
+        <div>
+          <h6 style="font-weight: 200;"><strong>Cluster 1</strong></h6>
+          <div class="ml-2">
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Email Open Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Click Through Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+          </div>
+      </section>
+
+      <section class="mt-3">
+        <div>
+          <h6 style="font-weight: 200;"><strong>Cluster 2</strong></h6>
+          <div class="ml-2">
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Email Open Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Click Through Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+          </div>
+      </section>
+
+      <section class="mt-3">
+        <div>
+          <h6 style="font-weight: 200;"><strong>Cluster 3</strong></h6>
+          <div class="ml-2">
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Email Open Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+            <div class="row input-group-prepend">
+              <span class="input-group-text" style="height:fit-content">Click Through Rate</span>
+              <p class="ml-2 mt-2">{{range of results}}</p>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Fifth row box-->
+<div class="card w-80 mt-3 mx-4">
+  <div class="card-body">
+      <h6 class="card-title"><strong>Meauring Model performance</strong></h6>
+
+      <p>We mainly want to look at how well the clusters are formed in clustering. Ideally, we want
+        the clusters to be well separated, large but dense. Yu can get the largest cluster by setting
+        k (the number of clusters) as small as one. You can get the densest clusters by using a large
+        k, creating many dense micro-clusters. We lose any insightful information we might want to infer 
+        from the cluster in both cases.
+      </p>
+
+      <section class="ml-3">
+        <div class="mt-4" style="font-size: small; font-weight: 400;">
+            <div class="row">
+                <p class="card-text">1. Sum of squared errors (SSE) vs number of clusters (k)</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt1_perf" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt1_perf">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="card-text">2. Number of points in each cluster</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt2_perf" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt2_perf">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="card-text">3. Silhouette score vs number of clusters (k)</p>
+                <div class="ml-2">
+                    <img data-toggle="collapse" data-target="#collapse-opt3_perf" style="height: 1.5em;" src="/img/downward_arrow.png">
+                </div>
+            </div>
+            <div class="collapse" id="collapse-opt3_perf">
+                <div class="card p-2">
+                    <div class=""card-body>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, 
+                        obcaecati aut. Quo tempore voluptate sunt totam ut quos mollitia quis, 
+                        dolorem recusandae beatae velit ullam reiciendis odio harum repellat ipsam.
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+  </div>
+</div>
+
+<section class="text-right mt-5 mr-4"> 
+  <a class="mb-2 btn btn-warning btn-rounded btn-lg w-25" style="font-size: small;" href="AnalyticalWorkflow.html" role="button"><strong>Complete!</strong></a>
+  <p>
+    <a class="text-dark" href="#">
+      <u>Or try another clustering model</u>
+    </a>
+  </p>
+</section>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+  </script>
+</body>
+
+</html>

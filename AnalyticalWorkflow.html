@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bootstrap Theme</title>
+</head>
+
+<div class="row" style="height: 100vh;">
+
+  <!-- Side panel-->
+  <div class="col-md-3 text-center" style="background-color:midnightblue;">
+
+    <img class="img-responsive"  src="/img/DataBreeze_whitefont.png" width="250">
+
+    <div class="text-center text-white mb-2" style="height: 50px;">
+      <div class="card-body py-2">
+        <class class="row px-5">
+          <div>
+            <img style="height: 2em;" src="/img/sweeping.png">
+          </div>
+          <div class="ml-2 mt-1">
+            <p>Data Preprocessing</p>
+          </div>
+        </class>
+      </div>
+    </div>
+
+    <div class="text-center text-white mb-2" style="height: 50px">
+      <div class="card-body py-2">
+        <class class="row px-5">
+          <div>
+            <img style="height: 2em;" src="/img/BarChart.png">
+          </div>
+          <div class="ml-2 mt-1">
+            <p>Descriptive Analysis</p>
+          </div>
+        </class>
+      </div>
+    </div>
+
+    <div class="card text-center text-white mb-2" style="height: 50px; background-color:dimgrey;">
+      <div class="card-body py-2">
+        <class class="row px-5">
+          <div>
+            <img style="height: 2em;" src="/img/ML.png">
+          </div>
+          <div class="ml-2 mt-1">
+            <p>Machine Learning</p>
+          </div>
+        </class>
+      </div>
+    </div>
+
+    <div class="text-center text-white mb-2" style="height: 50px">
+      <div class="card-body py-2">
+        <class class="row px-5">
+          <div>
+            <img style="height: 2em;" src="/img/curveGraphpng.png">
+          </div>
+          <div class="ml-2 mt-1">
+            <p>Inferential Analysis</p>
+          </div>
+        </class>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analytical Workflow-->
+  <div class="col mt-2 ml-3">
+
+    <div class="p-3" style="background-color: white">
+      <div class="ml-4">
+        <h5><strong>Analytical Workflow</strong></h5>
+      </div>
+    
+      <div class="row ml-4 mt-3">
+        <div class="col-md-3 card text-center" style="height: 100px; background-color: #FFE4C4;">
+          <div class="card-body pt-2">
+            <div>
+              <img style="height: 2em;" src="/img/file.png">
+            </div>
+            <div class="p-1" style="font-size: small">
+                <p>{{ file name }}</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-1 pt-3 px-4" style="height: 100px;">
+          <img src="img/arrow.png" style="width: 3em; height: 2em">
+        </div>
+    
+        <div class="col-md-3 card text-center" style="height: 100px; background-color: #FFE4C4;">
+          <div class="card-body pt-2">
+            <div>
+              <img style="height: 2em;" src="/img/sweeping.png">
+            </div>
+            <div class="p-1" style="font-size: small;">
+              <p>{{ Data preprocessing option }}</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-1 pt-3 px-4" style="height: 100px">
+          <img src="img/arrow.png" style="width: 3em; height: 2em">
+        </div>
+    
+        <div class="col-md-3 card text-center" style="height: 100px; background-color: #FFE4C4;">
+          <div class="card-body pt-2">
+            <div>
+              <img style="height: 2em;" src="/img/kmeans.png">
+            </div>
+            <div class="p-1" style="font-size: small;">
+              <p>K-means clustering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Parameters / Output -->
+    <div class="row mt-2">
+
+      <div class="col-md-5">
+        <div class="p-2">
+          <div class="jumbotron bg-white text-center bg-info mx-auto mt-3 rounded-pill p-4" style="width:400px">
+              <h4 class="text-dark" style="text-align:left"><strong>Input parameters</strong></h4>
+              <div class="input-group-prepend">
+                  <span class="input-group-text">k</span>
+              </div>
+              <div class=" input-group mb-1 mt-3">
+                  <input type="text" class="form-control">
+              </div>
+              <p style="text-align:left">Number of clusters to output</p>
+              <div class="row align-items-end mt-5">
+                  <a class="col btn btn-warning btn-rounded btn-lg" href="#" role="button"><strong>Compute</strong></a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 ml-3">
+        <div class="p-2">
+          <div class="jumbotron bg-white text-center bg-info mx-auto mt-3 rounded-pill p-4" style="width:400px">
+              <h4 class="text-dark mb-3" style="text-align:left"><strong>Output</strong></h4>
+              <img class="img-responsive"  src="{{ Image output of K Means}}" width="300">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<body> 
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+    <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+    </script>
+
+  </body>
+
+</html>
